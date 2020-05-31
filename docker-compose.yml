@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  redis:
+    image: redis:5.0
+    command: redis-server --requirepass 123456
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./docker-config/redis:/data
+  mysql:
+    network_mode: "host"
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_USER: 'local'
+      MYSQL_PASS: '123456'
+    image: mysql:5.7
+    restart: always
