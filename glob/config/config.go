@@ -37,7 +37,7 @@ func LoadConfig(file string) error {
 
 // InitConfig ...
 func InitConfig() {
-	if err := LoadConfig("app.conf"); err != nil {
+	if err := LoadConfig("app.yaml"); err != nil {
 		panic(err)
 	}
 }
@@ -119,7 +119,7 @@ type Clean struct {
 
 // GINConfig ...
 type GINConfig struct {
-	Address string `yaml:"Address"`
+	Address []string `yaml:"Address"`
 }
 
 // Refresh

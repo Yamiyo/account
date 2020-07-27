@@ -2,6 +2,8 @@ package log
 
 import (
 	"fmt"
+	"github.com/Yamiyo/account/utils"
+	"github.com/Yamiyo/account/utils/slack"
 	"io"
 	"os"
 	"path/filepath"
@@ -10,8 +12,6 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/Yamiyo/account/utils"
-	"github.com/Yamiyo/account/utils/slack"
 )
 
 /*************************************************
